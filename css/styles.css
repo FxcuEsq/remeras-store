@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f3f3;
+}
+
+header {
+    background: linear-gradient(90deg, #5e17eb, #8e44ff);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    letter-spacing: 2px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.card p {
+    color: #5e17eb;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #5e17eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8e44ff;
+}
+
+.ideas {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.ideas h2 {
+    color: #5e17eb;
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background: #5e17eb;
+}
+
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    font-size: 28px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp img {
+    width: 30px;
+    height: 30px;
+}
+
