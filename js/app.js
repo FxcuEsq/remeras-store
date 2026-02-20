@@ -1,28 +1,32 @@
-import Remera from "./Remera.js";
+export default class Remera {
+    constructor(nombre, precio, imagen, stockPorTalle) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.stockPorTalle = stockPorTalle;
+    }
 
-const contenedor = document.getElementById("contenedor");
+    render() {
+        let opciones = "";
 
-const remeras = [
-    new Remera("Urban Violeta", 15000, "img/remera1.jpg", {
-        S: 5,
-        M: 3,
-        L: 2,
-        XL: 0
-    }),
-    new Remera("Minimal White", 14000, "img/remera2.jpg", {
-        S: 4,
-        M: 6,
-        L: 1,
-        XL: 2
-    }),
-    new Remera("Grey Classic", 16000, "img/remera3.jpg", {
-        S: 2,
-        M: 0,
-        L: 3,
-        XL: 1
-    })
-];
+        for (let talle in this.stockPorTalle) {
+            opciones += `<option value="${talle}">
+                ${talle} (${this.stockPorTalle[talle]} disponibles)
+            </option>`;
+        }
 
-remeras.forEach(remera => {
-    contenedor.innerHTML += remera.render();
-});
+        return `
+            <div class="card">
+                <img src="${this.imagen}" alt="${this.nombre}">
+                <h2>${this.nombre}</h2>
+                <p>$${this.precio}</p>
+
+                <select class="talle-select">
+                    ${opciones}
+                </select>
+
+                <button>Comprar</button>
+            </div>
+        `;
+    }
+}
